@@ -20,3 +20,11 @@ class Player:
         elif valor == 'arrow' or valor == 'turtle' or valor == 'circle' or valor == 'square' or valor == 'triangle' or valor == 'classic':
             self.__cuerpo.shape(valor)
     
+    def numero(self, valor = None):
+        valor = comp(valor)
+        if valor == None:
+            return self.__numero
+        else:
+            self.__numero = numero
+        
+    
