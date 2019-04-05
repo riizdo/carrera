@@ -1,11 +1,14 @@
 import turtle
+import clase_player
 
 class Circuito():
-    corredores = []
+    
     
     def __init__(self, width, height):
         self.__width = width
         self.__height = height
+        corredores = []
+        self.new_player(len(corredores))
         
         self.__screen = turtle.Screen()
         
@@ -31,3 +34,6 @@ class Circuito():
             return self.__height
         else:
             self.__height = height
+            
+    def new_player(self, valor):
+        player = clase_player.Player(valor)
