@@ -36,9 +36,10 @@ class Circuito():
             self.__height = height
             
     def player(self, numero, nuevo = False):
-        if nuevo == False:
+        if nuevo == False and numero < len(self.__corredor):
             return self.__corredor[numero]
-        elif nuevo == True:
+        elif nuevo == True and numero == len(self.__corredor):
             self.__corredor.append(clase_player.Player(numero))
             
-            
+    def cantidad(self):
+        return len(self.__corredor)

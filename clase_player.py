@@ -6,7 +6,7 @@ class Player:
         self.__cuerpo = turtle.Turtle('turtle')
         
     def __str__(self):
-        return "Player {}".format(self._numero)
+        return "Player {}".format(self.__numero)
     
     def __comp(self, valor):
         try:
