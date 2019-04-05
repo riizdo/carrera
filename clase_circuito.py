@@ -7,8 +7,8 @@ class Circuito():
     def __init__(self, width, height):
         self.__width = width
         self.__height = height
-        corredores = []
-        self.new_player(len(corredores))
+        self.__corredor = []
+        self.player(len(self.__corredor), True)
         
         self.__screen = turtle.Screen()
         
@@ -35,5 +35,10 @@ class Circuito():
         else:
             self.__height = height
             
-    def new_player(self, valor):
-        player = clase_player.Player(valor)
+    def player(self, numero, nuevo = False):
+        if nuevo == False:
+            return self.__corredor[numero]
+        elif nuevo == True:
+            self.__corredor.append(clase_player.Player(numero))
+            
+            
