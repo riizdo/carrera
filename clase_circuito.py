@@ -18,13 +18,7 @@ class Circuito():
         
     def __str__(self):
         return 'pantalla del circuito'
-    
-    def __comp(self, valor):
-        try:
-            return int(valor)
-        except:
-            return None
-        
+
     def player(self, nuevo = False): 
         if nuevo == False:
             return self.__corredor
